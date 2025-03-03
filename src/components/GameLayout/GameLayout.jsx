@@ -11,6 +11,7 @@ export const GameLayout = ({
   setIsGameEnded,
   isDraw,
   setIsDraw,
+  resetGame,
 }) => {
   return (
     <>
@@ -29,6 +30,7 @@ export const GameLayout = ({
         isDraw={isDraw}
         setIsDraw={setIsDraw}
       />
+      <button onClick={resetGame}>Начать с начала</button>
     </>
   );
 };
@@ -42,4 +44,5 @@ GameLayout.propTypes = {
   setIsGameEnded: PropTypes.func,
   isDraw: PropTypes.bool,
   setIsDraw: PropTypes.func,
+  resetGame: PropTypes.func,
 };

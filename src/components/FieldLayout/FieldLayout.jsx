@@ -1,8 +1,9 @@
+import styles from './FieldLayout.module.css';
 import PropTypes from 'prop-types';
 
 export const FieldLayout = ({ value, onClick, disabled }) => {
   return (
-    <button className="square" onClick={onClick} disabled={disabled}>
+    <button className={styles.field} onClick={onClick} disabled={disabled}>
       {value}
     </button>
   );

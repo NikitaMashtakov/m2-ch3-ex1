@@ -1,8 +1,9 @@
+import styles from './InformationLayout.module.css';
 import PropTypes from 'prop-types';
 
 export const InformationLayout = ({ currentPlayer, isDraw, isGameEnded }) => {
   return (
-    <div>
+    <div className={styles.info}>
       {isDraw
         ? 'Ничья'
         : !isDraw && isGameEnded

@@ -25,8 +25,8 @@ export const GameContainer = () => {
         setIsGameEnded={setIsGameEnded}
         isDraw={isDraw}
         setIsDraw={setIsDraw}
+        resetGame={resetGame}
       />
-      <button onClick={resetGame}>Начать с начала</button>
     </>
   );
 };

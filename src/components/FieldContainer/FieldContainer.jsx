@@ -25,13 +25,15 @@ export const FieldContainer = ({
     let winner = null;
     WIN_PATTERNS.forEach((pattern) => {
       const [a, b, c] = pattern;
-      if (field.every(() => field[a] && field[a] === field[b] && field[a] === field[c])) {
+      if (field[a] && field[a] === field[b] && field[a] === field[c]) {
         setIsGameEnded(true);
         winner = field[a];
-      } else if (field.every((value) => value !== null)) {
-        setIsDraw(true);
+        return;
       }
     });
+    if (!winner && field.every((value) => value !== null)) {
+      setIsDraw(true);
+    }
     return winner;
   };
 
@@ -46,7 +48,7 @@ export const FieldContainer = ({
   };
 
   return (
-    <div style={{ width: '120px' }}>
+    <div>
       {field.map((value, index) => (
         <FieldLayout
           key={index}
