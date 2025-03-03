@@ -1,6 +1,8 @@
+import styles from './GameLayout.module.css';
 import PropTypes from 'prop-types';
 import { FieldContainer } from '../FieldContainer/FieldContainer';
 import { InformationContainer } from '../InformationContainer/InformationContainer';
+import { Button } from '../Button/Button';
 
 export const GameLayout = ({
   field,
@@ -14,7 +16,7 @@ export const GameLayout = ({
   resetGame,
 }) => {
   return (
-    <>
+    <div className={styles.container}>
       <InformationContainer
         currentPlayer={currentPlayer}
         isDraw={isDraw}
@@ -30,8 +32,10 @@ export const GameLayout = ({
         isDraw={isDraw}
         setIsDraw={setIsDraw}
       />
-      <button onClick={resetGame}>Начать с начала</button>
-    </>
+      <Button onButtonClick={resetGame} isGameEnded={isGameEnded}>
+        Начать с начала
+      </Button>
+    </div>
   );
 };
 

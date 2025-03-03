@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export const InformationLayout = ({ currentPlayer, isDraw, isGameEnded }) => {
   return (
-    <div className={styles.info}>
+    <div className={styles.container}>
       {isDraw
         ? 'Ничья'
         : !isDraw && isGameEnded

@@ -1,3 +1,4 @@
+import styles from './FieldContainer.module.css';
 import PropTypes from 'prop-types';
 import { FieldLayout } from '../FieldLayout/FieldLayout';
 
@@ -48,7 +49,7 @@ export const FieldContainer = ({
   };
 
   return (
-    <div>
+    <div className={styles.container}>
       {field.map((value, index) => (
         <FieldLayout
           key={index}
